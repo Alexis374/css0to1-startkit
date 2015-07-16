@@ -3,6 +3,12 @@
 	padding: 0;
 	list-style: none
 }
+. :after{
+  content: ".";
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
 body{
 	background: url(../img/background.jpg) no-repeat;
 	background-size: cover;
@@ -65,15 +71,39 @@ header.main-header h1{
 .info-section {
   background-color: #fff;
   padding: 30px 60px;
+  text-align: center;
 }
 .info-section header>h2{
-  text-align: center;
+  
   font-size: 28px;
   text-transform: uppercase;
   letter-spacing: 3px;
 }
+.info-section header>h2:after{
+  border-bottom: 3px solid black;
+  content: "";
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+}
+.info-section header>h2:before{
+  border-top: 1px solid #62686f;
+  content: "";
+  display: block;
+  padding-top: 30px;
+}
+.whatido header>h2:before{
+  content: "";
+  display: inline;
+}
+.info-section__description {
+  font-style: italic;
+  padding: 15px 0;
+}
 .whatido__skill-list{
 	text-align: center;
+  overflow: hidden;
+  margin: 60px 0;
 }
 .whatido__skill--code {
   background: url(../img/skill-code.png) no-repeat;
@@ -97,4 +127,89 @@ header.main-header h1{
   padding-top: 120px;
   width: 33.3%;
   float: left;
+}
+.education-experience__list {
+  margin: 30px;
+}
+.education-experience__list li{
+  overflow: hidden;
+  margin: 30px;
+}
+.education-experience__list li img{
+  width: 180px;
+  float: left;
+  margin-right: 30px;
+}
+.education-experience__list li div{
+  overflow: hidden;
+  text-align: left;
+
+}
+.photos__list li{
+  display: inline-block;
+  width: 24%;
+  box-sizing:border-box;
+  padding: 10px; 
+}
+.photos__list li img{
+  width: 100%;
+}
+.get-in-touch__list{
+
+}
+.get-in-touch__list li{
+  display: inline-block;
+  list-style: none;
+  margin: 22px;
+}
+.get-in-touch__list li p{
+  padding-top: 10px;
+}
+.contact input,
+.contact textarea {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 40%;
+  display: block;
+  margin: 20px auto;
+  padding:8px;
+}
+
+.contact button {
+  border: none;
+  border-radius: 9999px;
+
+  background: #ffd524;
+
+  cursor: pointer;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  color: #fff;
+  box-shadow: 0 3px 0 #daae1d;
+
+  width: 40%;
+  display: block;
+  margin: 0 auto;
+  padding:8px;
+}
+form{
+  position: relative;
+}
+form label{
+  position: absolute;
+}
+
+
+form label[for="name"]{
+  position: absolute;
+  top:3%;
+  left: 24.5%;
+
+}
+form label[for="email"]{
+  left: 25%;
+  top: 29%;
+}
+form label[for="message"]{
+    left: 22%;
+    top: 58%;
 }
