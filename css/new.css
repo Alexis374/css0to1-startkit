@@ -64,6 +64,8 @@ header.main-header h1{
 
 .info-section {
   background-color: #fff;
+  padding: 30px 60px;
+}
 }
 .whatido__skill-list{
 	text-align: center;
